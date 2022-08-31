@@ -77,9 +77,6 @@ control 'Dockerfile Image Build' do
   describe docker.images.where { repository == 'spring-boot-lab-build' && tag == 'latest' } do
     it { should exist }
   end
-  describe docker.images.where { repository == 'eclipse-temurin' && tag == '11-jre' } do
-    it { should exist }
-  end
 end
 
 control 'Dockerfile Build Container' do
